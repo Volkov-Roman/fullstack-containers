@@ -1,0 +1,10 @@
+Script started on 2025-05-29 15:58:16+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="120" LINES="30"]
+[?2004h]0;roma@DESKTOP-7D7MT39: ~[01;32mroma@DESKTOP-7D7MT39[00m:[01;34m~[00m$ ^V[Kdocker run -it ubuntu bash
+[?2004l[?2004h]0;root@586ce606ecce: /root@586ce606ecce:/# s ^V[Kmkdir / -p & /usr/srv c/app
+[?2004l[?2004h]0;root@586ce606ecce: /root@586ce606ecce:/# touch /usr/src/app/index.js
+[?2004l[?2004h]0;root@586ce606ecce: /root@586ce606ecce:/# [Kexit
+[?2004lexit
+[?2004h]0;roma@DESKTOP-7D7MT39: ~[01;32mroma@DESKTOP-7D7MT39[00m:[01;34m~[00m$ exit
+[?2004lexit
+
+Script done on 2025-05-29 16:00:02+00:00 [COMMAND_EXIT_CODE="0"]
