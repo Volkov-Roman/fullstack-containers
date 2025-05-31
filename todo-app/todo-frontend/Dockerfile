@@ -1,18 +1,24 @@
-FROM node:20 AS build-stage 
+# test-stage
+FROM node:20 AS test-stage
 
-WORKDIR /usr/src/app
+WORKDIR /app
+COPY . .
 
+RUN npm ci
+RUN npm run test
+
+# build-stage
+FROM node:20 AS build-stage
+
+WORKDIR /app
 COPY . .
 
 ENV VITE_BACKEND_URL=http://localhost:3000
 
 RUN npm ci
-
 RUN npm run build
 
-# This is a new stage, everything before this is gone, except for the files that we want to COPY
+# production-stage
 FROM nginx:1.25-alpine
 
-# COPY the directory dist from the build-stage to /usr/share/nginx/html
-# The target location here was found from the Docker hub page
-COPY --from=build-stage /usr/src/app/dist /usr/share/nginx/html
+COPY --from=build-stage /app/dist /usr/share/nginx/html
