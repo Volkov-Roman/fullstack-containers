@@ -1,12 +1,3 @@
-# test-stage
-FROM node:20 AS test-stage
-
-WORKDIR /app
-COPY . .
-
-RUN npm ci
-RUN npm run test
-
 # build-stage
 FROM node:20 AS build-stage
 
